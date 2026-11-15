@@ -1,0 +1,199 @@
+.container {
+  min-height: 100vh;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-family: var(--font-primary);
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+.content {
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: var(--bg-card);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1.5px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+  transition: background-color 0.35s ease, border-color 0.35s ease;
+}
+
+.title {
+  font-family: var(--font-primary);
+  font-size: var(--text-h3);
+  font-weight: var(--weight-bold);
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.summaryItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--divider);
+}
+
+.summaryLabel {
+  color: var(--text-secondary);
+  font-weight: var(--weight-medium);
+  font-size: var(--text-body-sm);
+}
+
+.summaryValue {
+  font-weight: var(--weight-bold);
+  color: var(--text-primary);
+  font-size: var(--text-body-sm);
+}
+
+.priceOriginal {
+  text-decoration: line-through;
+  color: var(--text-muted);
+  font-size: var(--text-caption);
+  margin-right: 0.5rem;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  font-size: var(--text-h3);
+  font-weight: var(--weight-extrabold);
+  color: var(--primary);
+}
+
+.methodsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.methodCard {
+  background: var(--bg-input);
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--text-primary);
+  font-weight: var(--weight-medium);
+  font-size: var(--text-body-sm);
+  font-family: var(--font-primary);
+}
+
+.methodCard:hover {
+  border-color: rgba(79, 70, 229, 0.3);
+  background: rgba(79, 70, 229, 0.03);
+}
+
+.methodCard.active {
+  border-color: var(--primary);
+  background: rgba(79, 70, 229, 0.06);
+  color: var(--primary);
+}
+
+.badge {
+  background: var(--primary);
+  color: white;
+  font-size: var(--text-tag);
+  padding: 0.2rem 0.55rem;
+  border-radius: 9999px;
+  margin-left: auto;
+  font-weight: var(--weight-bold);
+}
+
+.qrisContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-card);
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 1.5rem 0;
+  text-align: center;
+  color: var(--text-primary);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.qrisPlaceholder {
+  width: 200px;
+  height: 200px;
+  background: var(--bg-section-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid var(--text-primary);
+  margin-bottom: 1rem;
+  font-weight: var(--weight-bold);
+  font-size: var(--text-body);
+}
+
+.timer {
+  text-align: center;
+  font-size: var(--text-body);
+  color: var(--warning);
+  margin-bottom: 1.5rem;
+  font-weight: var(--weight-semibold);
+}
+
+.btnPay {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: var(--text-body);
+  font-weight: var(--weight-bold);
+  font-family: var(--font-primary);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 16px rgba(79, 70, 229, 0.3);
+}
+
+.btnPay:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(79, 70, 229, 0.4);
+}
+
+.btnPay:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.loader {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

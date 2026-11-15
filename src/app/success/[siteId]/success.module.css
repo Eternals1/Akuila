@@ -1,0 +1,192 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background: var(--auth-bg);
+  overflow: hidden;
+  position: relative;
+  font-family: var(--font-primary);
+  transition: background 0.35s ease;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--card-border);
+  border-radius: 24px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: var(--shadow-lg);
+  transition: background-color 0.35s ease, border-color 0.35s ease;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 2rem;
+  color: var(--success);
+}
+
+.checkmark {
+  width: 100%;
+  height: 100%;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: draw 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.title {
+  font-size: var(--text-h3);
+  font-weight: var(--weight-extrabold);
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: var(--text-body-sm);
+  line-height: var(--leading-normal);
+}
+
+.urlBox {
+  background: var(--bg-input);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid var(--card-border);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.urlText {
+  color: var(--primary);
+  font-weight: var(--weight-medium);
+  word-break: break-all;
+  font-size: var(--text-body);
+}
+
+.btnCopy {
+  background: rgba(79, 70, 229, 0.08);
+  border: none;
+  color: var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-caption);
+  font-family: var(--font-primary);
+}
+
+.btnCopy:hover {
+  background: rgba(79, 70, 229, 0.14);
+}
+
+.qrSection {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qrContainer {
+  background: var(--bg-card);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  width: 200px;
+  height: 200px;
+  border: 1px solid var(--card-border);
+}
+
+.btnDownload {
+  color: var(--text-secondary);
+  background: transparent;
+  border: 1px solid var(--border);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: var(--text-caption);
+  font-family: var(--font-primary);
+}
+
+.btnDownload:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.shareButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.btnShare {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+  background: rgba(79, 70, 229, 0.08);
+  color: var(--primary);
+}
+
+.btnShare:hover {
+  transform: scale(1.1);
+  background: rgba(79, 70, 229, 0.14);
+}
+
+.btnDashboard {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  font-size: var(--text-body);
+  font-weight: var(--weight-bold);
+  font-family: var(--font-primary);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(79, 70, 229, 0.3);
+}
+
+.btnDashboard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(79, 70, 229, 0.4);
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes draw {
+  to { stroke-dashoffset: 0; }
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #f00;
+  animation: fall 3s linear infinite;
+}
+
+@keyframes fall {
+  to { transform: translateY(100vh) rotate(720deg); }
+}
